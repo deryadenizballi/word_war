@@ -45,29 +45,50 @@
     <!-- war content  -->
     <div class="container pb-3 mb-5 war__container">
         <div class="row">
-            <div class="col-12 d-flex  border-bottom border-warning mb-5 ">
+            <div class="col-12 d-flex  border-bottom border-warning mb-0 ">
                 <button type="button" class="btn btn-warning me-5 my-2 text-white btn-back" onclick="addwar();">
                     back</button>
-                <h1 class="text-center fs-3py-3 w-75 ">Welcome to Word Wars</h1>
+                <h1 class="text-center w-75 ">Welcome to Word Wars</h1>
             </div>
 
+            <!-- counter  -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between align-items-center">
+
+                        <div class="card__score text-center my-3">
+                            <p class="fw-bold ">Highest Score</p>
+                            <span class="border p-1 px-4 text-center  text-success">8</span>
+                        </div>
+
+                        <div class="card__conter  text-center my-3">
+                            <p class="fw-bold">Point</p>
+                            <span class="border p-1 px-3 text-center  text-dark">5</span>
+                        </div>
+
+                        <div class="card__counter  text-center my-3">
+                            <p class="fw-bold">Time</p>
+                            <!-- <span class="border p-1 px-3 text-center counter text-danger">60sn</span> -->
+                            <div class="countdown_timer"></div>
+                            <div style="clear: both;"></div>
+                        </div>
+
+                        <div class="card__score text-center my-3">
+                            <button type="button" class="btn btn-dark btn-start" onclick="start();" >Start</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <!-- user 1  -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="card">
-
-                    <div class="card__point text-center">
-                        <p class="m-0 py-1 border-bottom d-inline"> Point</p>
-                        <span class="card__point--counter py-1 d-block fw-bold">5</span>
-                    </div>
-
-                    <div class="card__username bg-dark">
-                        <h5 class="m-0 py-2 text-center text-white fw-normal">Derya Ballı </h5>
-                    </div>
+            <div class="col-lg-6 m-auto mt-2 col-md-6 col-sm-12 p-2 bg-dark">
+                <div class="card border-0">
 
                     <div class="card__word">
-                        <img class="img-fluid"
+                        <img class="img-fluid position-relative"
                             src="https://images.unsplash.com/photo-1543528176-61b239494933?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80">
-
+                        <span
+                            class="position-absolute top-50 start-50 translate-middle text-white fs-1 img-name">Çilek</span>
                         <div class="card__word--option d-flex justify-content-around py-2">
 
                             <div class="form-check">
@@ -102,7 +123,7 @@
             </div>
 
             <!-- user 2  -->
-            <div class="ol-lg-6 col-md-6 col-sm-12">
+            <!-- <div class="ol-lg-6 col-md-6 col-sm-12">
                 <div class="card">
 
                     <div class="card__point text-center">
@@ -149,7 +170,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>
