@@ -19,7 +19,7 @@ function addwar() {
     warContainer.style.display = "block";
     loginContainer.style.display = "none";
   } else {
-    warContainer.style.display = "block";
+    warContainer.style.display = "none";
     loginContainer.style.display = "block";
   }
 }
@@ -33,3 +33,4 @@ function addword() {
     loginContainer.style.display = "block";
   }
 }
+
