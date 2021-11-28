@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Amatic SC", cursive;
+}
+
+.preloader {
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 5000ms all;
+  overflow: hidden;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+svg text {
+  font-size: 7rem;
+  stroke-width: 1px;
+  fill: transparent;
+  stroke: #ffff;
+  letter-spacing: 20px;
+  animation: effect 2s infinite alternate;
+}
+
+@keyframes effect {
+  0% {
+    stroke-dasharray: 0 70%;
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: 10%;
+  }
+}
+
+
+.intro__card {
+    height: 70vh;
+}
+
+.warCart {
+    background-color: #4D2D00;
+}

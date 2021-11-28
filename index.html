@@ -12,30 +12,111 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
 
+    <!-- custom css  -->
+    <link rel="stylesheet" href="app/custom.css">
+
     <title>w&w</title>
 </head>
 
 <body class="bg-light">
 
+    <!-- preloading -->
+    <!-- <div class="preloader">
+        <svg>
+            <text x="45%" y="55%">W&W</text> <br>
+        </svg>
+    </div> -->
+
     <!-- intro  -->
     <div class="container login__container">
         <div class="row">
-            <div class="col-12  border-bottom border-warning mb-5 ">
+            <div class="col-12  border-bottom border-danger mb-5 ">
                 <h1 class="text-center py-3 ">Welcome to Word Wars</h1>
 
             </div>
             <div class="col-6">
-                <div class="addCart bg-warning p-5">
+                <div class="addCart intro__card bg-warning p-5">
                     <button onclick="addwar();" type="button"
-                        class="btn-war btn btn-warning border  border-white w-100 text-white fs-2 p-1"> War </button>
+                        class="btn-war btn btn-warning border h-100  border-white w-100 text-white fs-2 p-1"> War </button>
                 </div>
             </div>
 
             <div class="col-6">
-                <div class="warCart bg-success p-5">
+                <div class="warCart intro__card  p-5">
                     <button onclick="addword();" type="button"
-                        class=" btn-success border  border-white w-100 text-white fs-2 btn-add p-1"> Add
+                        class=" btn border h-100 border-white w-100 text-white fs-2 btn-add p-1"> Add
                         Word</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+     <!-- add-word content  -->
+     <div class="container word__container">
+        <div class="row">
+            <div class="col-12 d-flex border-bottom border-success">
+                <button type="button" class="btn btn-success me-5 my-2 text-white btn-back" onclick="addword();">
+                    back</button>
+                <h1 class=" text-center w-75 py-1">Add Word</h1>
+            </div>
+
+            <div class="col-6 my-5">
+                <div class="addWordCard">
+                    <label>Kelime Gir:</label>
+                    <input type="text img_name"> <br>
+
+                    <label class="mt-4">Seçenek Gir:</label>
+                    <input type="text"> <br>
+                    <label class="mt-4">Seçenek Gir:</label>
+                    <input type="text"> <br>
+                    <label class="mt-4">Seçenek Gir:</label>
+                    <input type="text"> <br>
+
+                    <div class="mb-3 mt-3">
+                        <label for="formFile" class="form-label">Kelime Görseli Seç</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 my-5 d-flex justify-content-end">
+                <div class="card w-50">
+                    <div class="card__word">
+                        <img class="img-fluid position-relative"
+                            src="https://images.unsplash.com/photo-1543528176-61b239494933?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80">
+                        <span
+                            class="position-absolute top-50 start-50 translate-middle text-white fs-1 img-name">Çilek</span>
+                        <div class="card__word--option d-flex justify-content-around py-2">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <span class="card__word--item">secenek 1 </span>
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <span class="card__word--item">secenek 1 </span>
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <span class="card__word--item">secenek 1 </span>
+                                </label>
+                            </div>
+
+                        </div>
+                        <button type="button" class="btn btn-success rounded-0 mt-3 w-100">Send</button>
+                    </div>
+
                 </div>
             </div>
 
@@ -68,11 +149,11 @@
 
                         <div class="card__counter  text-center my-3">
                             <p class="fw-bold">Time</p>
-                             <span class="border p-1 px-3 text-center counter text-danger">60sn</span> 
+                            <span class="border p-1 px-3 text-center counter text-danger">60sn</span>
                         </div>
 
                         <div class="card__score text-center my-3">
-                            <button type="button" class="btn btn-dark btn-start" onclick="start();" >Start</button>
+                            <button type="button" class="btn btn-dark btn-start" onclick="start();">Start</button>
                         </div>
 
                     </div>
@@ -169,72 +250,6 @@
 
                 </div>
             </div> -->
-
-        </div>
-    </div>
-
-    <!-- add-word content  -->
-    <div class="container word__container">
-        <div class="row">
-            <div class="col-12 d-flex border-bottom border-success">
-                <button type="button" class="btn btn-success me-5 my-2 text-white btn-back" onclick="addword();">
-                    back</button>
-                <h1 class=" text-center w-75 py-1">Add Word</h1>
-            </div>
-
-            <div class="col-6 my-5">
-                <div class="addWordCard">
-                    <label>Kelime Gir:</label>
-                    <input type="text"> <br>
-
-                    <label class="mt-4">Seçenek Gir:</label>
-                    <input type="text"> <br>
-
-                    <div class="mb-3 mt-3">
-                        <label for="formFile" class="form-label">Kelime Görseli Seç</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 my-5 d-flex justify-content-end">
-                <div class="card w-50">
-                    <div class="card__word ">
-                        <img class="img-fluid"
-                            src="https://images.unsplash.com/photo-1543528176-61b239494933?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80">
-
-                        <div class="card__word--option d-flex justify-content-around py-2 ">
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    <span class="card__word--item">secenek </span>
-                                </label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    <span class="card__word--item">secenek </span>
-                                </label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    <span class="card__word--item">secenek </span>
-                                </label>
-                            </div>
-
-                        </div>
-                        <button type="button" class="btn btn-success rounded-0 mt-3 w-100">Send</button>
-                    </div>
-
-                </div>
-            </div>
 
         </div>
     </div>
