@@ -1,12 +1,12 @@
 // prelodaing
-// var loader = document.querySelector(".preloader");
+var loader = document.querySelector(".preloader");
 
-// window.addEventListener("load", function () {
-//   setTimeout(()=>{
-//     loader.style.display = "none";
-//   },3000)
+window.addEventListener("load", function () {
+  setTimeout(()=>{
+    loader.style.display = "none";
+  },3000)
 
-// });
+});
 
 
 const warContainer = document.querySelector(".war__container");
@@ -16,8 +16,9 @@ const btnAdd = document.querySelector(".btn-add");
 const wordContainer = document.querySelector(".word__container");
 const counter = document.querySelector(".counter");
 const btnStart = document.querySelector(".btn-start");
+const addWordBtn=document.querySelector(".add__btn__word");
 const imgName=document.querySelector(".img_name");
-console.log(imgName);
+
 
 // olay dinleyicileri
 btnWar.addEventListener("click", addwar());
@@ -46,3 +47,9 @@ function addword() {
 }
 
 
+addWordBtn.addEventListener("click" , wordSend);
+
+function wordSend() {
+  var img_user_name=imgName.value ;
+console.log(img_user_name);
+}
